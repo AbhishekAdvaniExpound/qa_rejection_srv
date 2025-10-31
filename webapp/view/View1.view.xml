@@ -1,0 +1,66 @@
+<mvc:View
+  controllerName="QA_REJECTION_SRV.controller.View1"
+  xmlns:mvc="sap.ui.core.mvc"
+  displayBlock="true"
+  xmlns="sap.m"
+  xmlns:layout="sap.ui.layout"
+  xmlns:microchart="sap.suite.ui.microchart"
+>
+  <Page
+    id="_IDGenPage1"
+    title="Quality Rejection KPI"
+  >
+    <content>
+      <HBox
+        id="_IDGenHBox1"
+        width="100%"
+        wrap="Wrap"
+        alignItems="Start"
+        justifyContent="Start"
+        class="sapUiLargeMargin"
+      >
+        <GenericTile
+          id="_IDGenGenericTile"
+          header="Company 1000"
+          press="onGoTo1000"
+          class="sapUiTinyMargin"
+        >
+          <TileContent
+            id="_IDGenTileContent"
+            unit="lines"
+          >
+            <NumericContent
+              id="_IDGenNumericContent"
+              value="{tileModel>/count1000}"
+              truncateValueTo="5"
+            />
+            <TextArea
+              id="_IDGenTextArea"
+              value="{firstModel>/firstString}"
+              rows="10"
+              width="100%"
+            />
+          </TileContent>
+        </GenericTile>
+
+        <GenericTile
+          id="_IDGenGenericTile1"
+          header="Company 2100"
+          press="onGoTo2100"
+          class="sapUiTinyMargin"
+        >
+          <TileContent
+            id="_IDGenTileContent1"
+            unit="lines"
+          >
+            <NumericContent
+              id="_IDGenNumericContent1"
+              value="{tileModel>/count2100}"
+              truncateValueTo="5"
+            />
+          </TileContent>
+        </GenericTile>
+      </HBox>
+    </content>
+  </Page>
+</mvc:View>

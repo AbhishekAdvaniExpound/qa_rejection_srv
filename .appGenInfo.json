@@ -1,0 +1,24 @@
+{
+  "generationParameters": {
+    "generationDate": "Thu Oct 30 2025 18:50:10 GMT+0000 (Coordinated Universal Time)",
+    "generatorPlatform": "SAP Business Application Studio",
+    "serviceType": "SAP System (ABAP On-Premise)",
+    "metadataFilename": "",
+    "serviceUrl": "http://ds4http.sap.essa.id:44300/sap/opu/odata/sap/ZMMGW_ON_TIME_DELIVERY_SRV",
+    "appName": "QA_REJECTION_SRV",
+    "appTitle": "Quality Rejection KPI",
+    "appDescription": "An SAP Fiori application.",
+    "appNamespace": "",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.120.29",
+    "enableCodeAssist": false,
+    "enableEslint": false,
+    "enableTypeScript": false,
+    "showMockDataInfo": true,
+    "generatorVersion": "1.19.3",
+    "template": "Basic V2",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [],
+    "launchText": "To launch the generated application, run the following from the generated application root folder:\n\n```\n    npm start\n```"
+  }
+}

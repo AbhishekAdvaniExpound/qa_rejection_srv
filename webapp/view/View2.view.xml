@@ -1,0 +1,10 @@
+<mvc:View controllerName="QA_REJECTION_SRV.controller.View2"
+xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true" xmlns="sap.m"
+    xmlns:viz="sap.viz.ui5.controls"
+    xmlns:vizData="sap.viz.ui5.data"
+    xmlns:vizFeeds="sap.viz.ui5.controls.common.feeds">
+    <Page id="idView2Page" title="Details">
+
+    </Page>
+</mvc:View>

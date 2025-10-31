@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "3.1"
+metadata:
+  name: QA_REJECTION_SRV
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          destination: DS4_100_HTTPS
+          url: http://ds4http.sap.essa.id:44300
+          client: '100'
+        app:
+          name: QA_REJECTION_SRV
+          package: Z001
+          transport: DS4K916502
+        exclude:
+          - /test/
