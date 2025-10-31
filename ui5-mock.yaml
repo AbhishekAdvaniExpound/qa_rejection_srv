@@ -2,7 +2,7 @@
 
 specVersion: "3.1"
 metadata:
-  name: QA_REJECTION_SRV
+  name: qa_rejection_srv
 type: application
 server:
   customMiddleware:

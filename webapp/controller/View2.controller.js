@@ -7,7 +7,7 @@ sap.ui.define([
     "sap/ui/export/Spreadsheet"
 ], (Controller, Filter, FilterOperator, DateFormat, FilterType, Spreadsheet) => {
     "use strict";
-    return Controller.extend("QA_REJECTION_SRV.controller.View2", {
+    return Controller.extend("qa_rejection_srv.controller.View2", {
         onInit: function () {
 
     },

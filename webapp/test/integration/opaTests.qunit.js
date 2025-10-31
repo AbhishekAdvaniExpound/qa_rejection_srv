@@ -1,7 +1,7 @@
 /* global QUnit */
 QUnit.config.autostart = false;
 
-sap.ui.require(["QA_REJECTION_SRV/test/integration/AllJourneys"
+sap.ui.require(["qa_rejection_srv/test/integration/AllJourneys"
 ], function () {
 	QUnit.start();
 });

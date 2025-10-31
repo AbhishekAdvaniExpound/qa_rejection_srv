@@ -3,7 +3,7 @@ sap.ui.define([
 ], (Controller) => {
   "use strict";
 
-  return Controller.extend("QA_REJECTION_SRV.controller.View1", {
+  return Controller.extend("qa_rejection_srv.controller.View1", {
     onInit() {
       const sServiceUrl = "/ZMMGW_QUALTITY_REJECTION_SRV/";
       // const oModel = new ODataModel(sServiceUrl, {

@@ -1,4 +1,4 @@
-<mvc:View controllerName="QA_REJECTION_SRV.controller.App"
+<mvc:View controllerName="qa_rejection_srv.controller.App"
     displayBlock="true"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">

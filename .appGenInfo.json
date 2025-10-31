@@ -5,7 +5,7 @@
     "serviceType": "SAP System (ABAP On-Premise)",
     "metadataFilename": "",
     "serviceUrl": "http://ds4http.sap.essa.id:44300/sap/opu/odata/sap/ZMMGW_ON_TIME_DELIVERY_SRV",
-    "appName": "QA_REJECTION_SRV",
+    "appName": "qa_rejection_srv",
     "appTitle": "Quality Rejection KPI",
     "appDescription": "An SAP Fiori application.",
     "appNamespace": "",

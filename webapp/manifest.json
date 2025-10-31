@@ -1,7 +1,7 @@
 {
   "_version": "1.60.0",
   "sap.app": {
-    "id": "QA_REJECTION_SRV",
+    "id": "qa_rejection_srv",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -20,18 +20,19 @@
         "uri": "/sap/opu/odata/sap/ZMMGW_QUALTITY_REJECTION_SRV/",
         "type": "OData",
         "settings": {
-          "annotations": [],
-          "localUri": "localService/mainService/metadata.xml",
           "odataVersion": "2.0"
         }
       }
     },
+    "supportedLocales": [
+      "en"
+    ],
     "crossNavigation": {
       "inbounds": {
-        "QA_REJECTION_SRV-manage": {
-          "semanticObject": "QA_REJECTION_SRV",
+        "qa_rejection_srv-manage": {
+          "semanticObject": "qa_rejection_srv",
           "action": "manage",
-          "title": "{{QA_REJECTION_SRV-manage.flpTitle}}",
+          "title": "{{qa_rejection_srv-manage.flpTitle}}",
           "signature": {
             "parameters": {},
             "additionalParameters": "allowed"
@@ -77,7 +78,7 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "QA_REJECTION_SRV.i18n.i18n"
+          "bundleName": "qa_rejection_srv.i18n.i18n"
         }
       },
       "": {
@@ -101,9 +102,9 @@
         "transition": "slide",
         "type": "View",
         "viewType": "XML",
-        "path": "QA_REJECTION_SRV.view",
+        "path": "qa_rejection_srv.view",
         "async": true,
-        "viewPath": "QA_REJECTION_SRV.view"
+        "viewPath": "qa_rejection_srv.view"
       },
       "routes": [
         {
@@ -129,7 +130,7 @@
       }
     },
     "rootView": {
-      "viewName": "QA_REJECTION_SRV.view.App",
+      "viewName": "qa_rejection_srv.view.App",
       "type": "XML",
       "id": "App",
       "async": true

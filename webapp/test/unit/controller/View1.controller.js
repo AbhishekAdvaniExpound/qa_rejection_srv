@@ -1,7 +1,7 @@
 /*global QUnit*/
 
 sap.ui.define([
-	"QA_REJECTION_SRV/controller/View1.controller"
+	"qa_rejection_srv/controller/View1.controller"
 ], function (Controller) {
 	"use strict";
 

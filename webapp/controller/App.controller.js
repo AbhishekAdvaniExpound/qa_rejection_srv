@@ -3,7 +3,7 @@ sap.ui.define([
 ], (BaseController) => {
   "use strict";
 
-  return BaseController.extend("QA_REJECTION_SRV.controller.App", {
+  return BaseController.extend("qa_rejection_srv.controller.App", {
       onInit() {
       }
   });

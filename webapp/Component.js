@@ -1,10 +1,10 @@
 sap.ui.define([
     "sap/ui/core/UIComponent",
-    "QA_REJECTION_SRV/model/models"
+    "qa_rejection_srv/model/models"
 ], (UIComponent, models) => {
     "use strict";
 
-    return UIComponent.extend("QA_REJECTION_SRV.Component", {
+    return UIComponent.extend("qa_rejection_srv.Component", {
         metadata: {
             manifest: "json",
             interfaces: [

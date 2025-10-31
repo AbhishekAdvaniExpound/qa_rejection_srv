@@ -14,7 +14,7 @@ sap.ui.define([
 			// start the app UI component
 			this.iStartMyUIComponent({
 				componentConfig: {
-					name: "QA_REJECTION_SRV",
+					name: "qa_rejection_srv",
 					async: true
 				},
 				hash: oOptions.hash,

@@ -1,5 +1,5 @@
 <mvc:View
-  controllerName="QA_REJECTION_SRV.controller.View1"
+  controllerName="qa_rejection_srv.controller.View1"
   xmlns:mvc="sap.ui.core.mvc"
   displayBlock="true"
   xmlns="sap.m"

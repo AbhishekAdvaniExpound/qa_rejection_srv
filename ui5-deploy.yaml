@@ -2,7 +2,7 @@
 
 specVersion: "3.1"
 metadata:
-  name: QA_REJECTION_SRV
+  name: qa_rejection_srv
 type: application
 builder:
   resources:
@@ -18,7 +18,7 @@ builder:
           url: http://ds4http.sap.essa.id:44300
           client: '100'
         app:
-          name: QA_REJECTION_SRV
+          name: qa_rejection_srv
           package: Z001
           transport: DS4K916502
         exclude:

@@ -7,7 +7,7 @@ sap.ui.define([
 
 	Opa5.extendConfig({
 		arrangements: new Startup(),
-		viewNamespace: "QA_REJECTION_SRV.view.",
+		viewNamespace: "qa_rejection_srv.view.",
 		autoWait: true
 	});
 });

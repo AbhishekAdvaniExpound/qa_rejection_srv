@@ -8,7 +8,7 @@
 |**Template Used**<br>Basic V2|
 |**Service Type**<br>SAP System (ABAP On-Premise)|
 |**Service URL**<br>http://ds4http.sap.essa.id:44300/sap/opu/odata/sap/ZMMGW_ON_TIME_DELIVERY_SRV|
-|**Module Name**<br>QA_REJECTION_SRV|
+|**Module Name**<br>qa_rejection_srv|
 |**Application Title**<br>Quality Rejection KPI|
 |**Namespace**<br>|
 |**UI5 Theme**<br>sap_horizon|
@@ -17,7 +17,7 @@
 |**Enable TypeScript**<br>False|
 |**Add Eslint configuration**<br>False|
 
-## QA_REJECTION_SRV
+## qa_rejection_srv
 
 An SAP Fiori application.
 
