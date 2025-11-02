@@ -17,7 +17,7 @@ server:
           url: https://ui5.sap.com
         backend:
           - path: /sap
-            url: http://ds4http.sap.essa.id:44300
+            url: http://vhpuads4ci.sap.essa.id:44300
             destination: DS4_100_HTTPS
     - name: fiori-tools-appreload
       afterMiddleware: compression
@@ -35,7 +35,7 @@ server:
       configuration:
         mountPath: /
         services:
-          - urlPath: /sap/opu/odata/sap/ZMMGW_ON_TIME_DELIVERY_SRV
+          - urlPath: /sap/opu/odata/sap/ZMMGW_QUALTITY_REJECTION_SRV
             metadataPath: ./webapp/localService/mainService/metadata.xml
             mockdataPath: ./webapp/localService/mainService/data
             generateMockData: true

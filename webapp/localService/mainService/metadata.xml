@@ -32,8 +32,8 @@
                 <EntitySet Name="quality_control_kpi" EntityType="ZMMGW_QUALTITY_REJECTION_SRV.Quality_control_kpi" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1" />
             </EntityContainer>
             <Annotation xmlns="http://docs.oasis-open.org/odata/ns/edm" Term="Core.SchemaVersion" String="1.0.0" />
-            <atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="https://ds4http.sap.essa.id:44300/sap/opu/odata/sap/ZMMGW_QUALTITY_REJECTION_SRV/$metadata" />
-            <atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="https://ds4http.sap.essa.id:44300/sap/opu/odata/sap/ZMMGW_QUALTITY_REJECTION_SRV/$metadata" />
+            <atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="https://vhpuads4ci.sap.essa.id:44300/sap/opu/odata/sap/ZMMGW_QUALTITY_REJECTION_SRV/$metadata" />
+            <atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="https://vhpuads4ci.sap.essa.id:44300/sap/opu/odata/sap/ZMMGW_QUALTITY_REJECTION_SRV/$metadata" />
         </Schema>
     </edmx:DataServices>
 </edmx:Edmx>

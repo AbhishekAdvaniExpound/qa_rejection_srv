@@ -15,8 +15,8 @@ builder:
       configuration:
         target:
           destination: DS4_100_HTTPS
-          url: http://ds4http.sap.essa.id:44300
-          client: '100'
+          url: http://vhpuads4ci.sap.essa.id:44300
+          client: "100"
         app:
           name: qa_rejection_srv
           package: Z001
