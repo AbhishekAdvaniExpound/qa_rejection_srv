@@ -1,10 +1,133 @@
-<mvc:View controllerName="qa_rejection_srv.controller.View2"
-xmlns:mvc="sap.ui.core.mvc"
-    displayBlock="true" xmlns="sap.m"
-    xmlns:viz="sap.viz.ui5.controls"
-    xmlns:vizData="sap.viz.ui5.data"
-    xmlns:vizFeeds="sap.viz.ui5.controls.common.feeds">
-    <Page id="idView2Page" title="Details">
+<mvc:View
+  controllerName="qa_rejection_srv.controller.View2"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core"
+  xmlns:viz="sap.viz.ui5.controls"
+  xmlns:viz.data="sap.viz.ui5.data"
+  xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+  displayBlock="true">
 
-    </Page>
+  <Page id="idView2Page" title="Company {view>/bukrs}">
+    <content>
+
+      <!-- Filter Bar -->
+      <HBox id="fb" width="100%" alignItems="Center" justifyContent="SpaceBetween" class="sapUiMediumMarginBottom">
+        <HBox alignItems="Center" wrap="Wrap" class="sapUiTinyMarginBottom">
+          <Text text="Month" class="sapUiTinyMarginEnd"/>
+          <Select id="idMonthSel" width="6rem" change=".onFilterChanged">
+            <items>
+              <core:Item key=""  text="All"/>
+              <core:Item key="1"  text="Jan"/>
+              <core:Item key="2"  text="Feb"/>
+              <core:Item key="3"  text="Mar"/>
+              <core:Item key="4"  text="Apr"/>
+              <core:Item key="5"  text="May"/>
+              <core:Item key="6"  text="Jun"/>
+              <core:Item key="7"  text="Jul"/>
+              <core:Item key="8"  text="Aug"/>
+              <core:Item key="9"  text="Sep"/>
+              <core:Item key="10" text="Oct"/>
+              <core:Item key="11" text="Nov"/>
+              <core:Item key="12" text="Dec"/>
+            </items>
+          </Select>
+
+          <Text text="Year" class="sapUiTinyMarginBegin sapUiTinyMarginEnd"/>
+          <Select id="idYearSel" width="6rem" change=".onFilterChanged">
+            <items>
+              <core:Item key=""           text="All"/>
+              <core:Item key="{view>/y1}" text="{view>/y1}"/>
+              <core:Item key="{view>/y2}" text="{view>/y2}"/>
+              <core:Item key="{view>/y3}" text="{view>/y3}"/>
+            </items>
+          </Select>
+
+          <Text text="Purch. Group" class="sapUiTinyMarginBegin sapUiTinyMarginEnd"/>
+          <!-- replace the current PG Select -->
+<Select
+  id="idPgSel"
+  width="14rem"
+  change=".onFilterChanged"
+  forceSelection="false"
+  items="{path: 'pgModel>/'}">
+  <core:Item key="{pgModel>key}" text="{pgModel>text}"/>
+</Select>
+
+        </HBox>
+
+        <HBox alignItems="Center" class="sapUiTinyMarginBottom">
+          <Button id="idRefreshBtn" text="Refresh" press=".onRefresh"/>
+        </HBox>
+      </HBox>
+
+      <!-- KPI Strip -->
+      <HBox width="100%" wrap="Wrap" class="sapUiTinyMarginBottom" alignItems="Center">
+        <VBox class="sapUiSmallMarginEnd">
+          <Text text="Avg Rejection %"/>
+          <ObjectNumber state="Information" emphasized="true"
+                        number="{= (${chart>/kpi/avg} * 100).toFixed(2) }" unit="%"/>
+        </VBox>
+        <VBox class="sapUiSmallMarginEnd">
+          <Text text="Total Lines"/>
+          <ObjectNumber state="Success" emphasized="true"
+                        number="{chart>/kpi/totalLines}" unit="lines"/>
+        </VBox>
+        <VBox class="sapUiSmallMarginEnd">
+          <Text text="Rejected Lines"/>
+          <ObjectNumber state="Error" emphasized="true"
+                        number="{chart>/kpi/rejectedLines}" unit="rejected"/>
+        </VBox>
+      </HBox>
+
+      <!-- Column Chart -->
+<viz:VizFrame id="idViz" height="320px" width="100%" vizType="column">
+  <viz:dataset>
+    <viz.data:FlattenedDataset data="{path: 'chart>/bars'}">
+      <viz.data:dimensions>
+        <viz.data:DimensionDefinition name="Group" value="{chart>group}"/>
+      </viz.data:dimensions>
+      <viz.data:measures>
+        <!-- match the controller: bars[].rejectedQty -->
+  <viz.data:MeasureDefinition name="Target (%)" value="{chart>pct}"/>
+      </viz.data:measures>
+    </viz.data:FlattenedDataset>
+  </viz:dataset>
+  <viz:feeds>
+    <viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="Group"/>
+<viz.feeds:FeedItem uid="valueAxis" type="Measure" values="Target (%)"/>
+  </viz:feeds>
+</viz:VizFrame>
+
+
+      <!-- Table -->
+      <Table id="idKpiReportSetTable" growing="true" growingScrollToLoad="true">
+        <columns>
+          <Column width="7rem"><Text text="Company"/></Column>
+          <Column width="5rem"><Text text="Year"/></Column>
+          <Column width="5rem"><Text text="Month"/></Column>
+          <Column width="9rem"><Text text="PG"/></Column>
+          <Column width="10rem"><Text text="Material"/></Column>
+          <Column width="10rem"><Text text="Vendor"/></Column>
+          <Column hAlign="End" width="7rem"><Text text="Accepted"/></Column>
+          <Column hAlign="End" width="7rem"><Text text="Rejected"/></Column>
+        </columns>
+        <items>
+          <ColumnListItem>
+            <cells>
+              <Text text="{bukrs}"/>
+              <Text text="{year}"/>
+              <Text text="{month}"/>
+              <Text text="{ekgrp}"/>
+              <Text text="{MATNR}"/>
+              <Text text="{Vendor_Name}"/>
+              <ObjectNumber number="{Accepted_Qty}"/>
+              <ObjectNumber number="{Rejected_Qty}" state="{= Number(${Rejected_Qty})>0 ? 'Error' : 'Success'}"/>
+            </cells>
+          </ColumnListItem>
+        </items>
+      </Table>
+
+    </content>
+  </Page>
 </mvc:View>

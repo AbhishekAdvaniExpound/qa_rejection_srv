@@ -24,9 +24,7 @@
         }
       }
     },
-    "supportedLocales": [
-      "en"
-    ],
+    "supportedLocales": ["en"],
     "crossNavigation": {
       "inbounds": {
         "qa_rejection_srv-manage": {
@@ -110,23 +108,22 @@
         {
           "name": "RouteView1",
           "pattern": ":?query:",
-          "target": [
-            "TargetView1"
-          ]
+          "target": ["TargetView1"]
         },
         {
           "name": "RouteView2",
           "pattern": "View2/{Footer}/{Wbs}",
-          "target": [
-            "TargetView2"
-          ]
+          "target": ["TargetView2"]
+        },
+        {
+          "name": "Company",
+          "pattern": "company/{bukrs}",
+          "target": ["TargetView2"]
         }
       ],
       "targets": {
-        "TargetView1": {
-          "id": "View1",
-          "name": "View1"
-        }
+        "TargetView1": { "viewName": "View1", "viewType": "XML" },
+        "TargetView2": { "viewName": "View2", "viewType": "XML" }
       }
     },
     "rootView": {
